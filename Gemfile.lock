@@ -1,0 +1,19 @@
+GIT
+  remote: git://github.com/SkyWriter/GoogleReaderAPI.git
+  revision: bca91aea4ce45ffac90df714eee4c475bc2c1b18
+  specs:
+    GoogleReaderApi (0.3.6)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    addressable (2.2.8)
+    launchy (2.1.0)
+      addressable (~> 2.2.6)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  GoogleReaderApi!
+  launchy
