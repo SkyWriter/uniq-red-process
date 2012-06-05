@@ -25,6 +25,6 @@ Gem::Specification.new do |s|
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   s.require_paths = ["lib"]
     
-  s.add_dependency('GoogleReaderApiUniq', '~> 0.3.7')
+  s.add_dependency('GoogleReaderApiUniq', '~> 0.3.8')
   s.add_dependency('launchy', '~> 2.1')
 end

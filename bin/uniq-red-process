@@ -48,6 +48,7 @@ def mark_issue_read(issue_no)
   issues_entries_hash[issue_no.to_i].each do |entry|
     entry.toggle_read
   end
+  issues_entries_hash.delete(issue_no.to_i)
 end
 
 def issue_updates_count(issue_no)
@@ -72,7 +73,7 @@ puts ""
 puts "Try: n - to read the next issue"
 
 cmd = ''
-while cmd != 'q'
+while cmd != 'q' && issues_entries_hash.count > 0
   if cmd == 'n'
     issue_no = read_next_issue
     puts "Opening #{issue_no}..."
