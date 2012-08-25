@@ -76,9 +76,8 @@ cmd = ''
 while cmd != 'q' && issues_entries_hash.count > 0
   if cmd == 't'
     5.times do
-      puts "Opening #{issue_no}..."
       issue_no = read_next_issue
-      puts "Marking #{issue_no} as read..."
+      puts "Opening #{issue_no} and marking it as read..."
       mark_issue_read(issue_no)
     end
   end
