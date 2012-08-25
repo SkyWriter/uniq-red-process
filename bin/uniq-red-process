@@ -5,7 +5,7 @@ require 'google_reader_api_uniq'
 require 'readline'
 
 begin
-  require File.expand_path('~/.process_red')
+  load File.expand_path('~/.process_red')
   raise "Undefined credetials" unless CREDENTIALS
 rescue Exception => ex
   puts "Please define your Google Reader credentials in the ~/.process_red file:"
@@ -74,6 +74,14 @@ puts "Try: n - to read the next issue"
 
 cmd = ''
 while cmd != 'q' && issues_entries_hash.count > 0
+  if cmd == 't'
+    5.times do
+      puts "Opening #{issue_no}..."
+      issue_no = read_next_issue
+      puts "Marking #{issue_no} as read..."
+      mark_issue_read(issue_no)
+    end
+  end
   if cmd == 'n'
     issue_no = read_next_issue
     puts "Opening #{issue_no}..."
